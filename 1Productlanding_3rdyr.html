@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  line-height: 1.7;
+  color:#1f2937;
+  transition: all 0.4s ease;
+}
+header {
+  background: linear-gradient(130deg, #ca00e4, #feae00);
+  padding: 25px;
+  position: sticky;
+  z-index: 1000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  
+  
+}
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.logo {
+  display: flex;
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f1010;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  justify-content: center;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  /*border-radius: 25px;*/
+  transition: all 0.3s ease;
+  
+}
+nav .active,
+nav a:hover ,
+.button:hover{
+  background-color: #b9b45f;
+  color: #0f1010;
+}
+
+img{
+  height: 50px;
+  width: 50px;
+}
+.Featurebox {
+  display: block;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 15px;
+  /*border-radius: 24px;*/
+  border: solid 2px #0f1010;
+  text-align: left;
+}
+.secondcontainer{
+  display: flex;
+  justify-content: center;
+  
+}
+.lastcontainer{
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  
+ 
+  
+   
+}
+.pricebox{
+  border: 2px solid #0f1010;
+  /*border-radius: 24px;*/
+  padding: 20px;
+  justify-content: center ;
+  margin: 20px;
+}  
+ul {
+list-style-type: none;
+justify-content: center;
+display: grid;
+
+
+
+}  
+
+.button{
+color: #0e0f10;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.ph{
+display: flex;
+justify-content: center;
+font-size: 20px;
+}
+.header2{
+color: #fff;
+background: linear-gradient(130deg, #ca00e4, #feae00)       ;
+height: 20%;
+border-radius: 13px;
+
+
+}
+@media screen and (max-height: 450px) {
+#navbar  {padding-top: 15px;}
+#navbar  a {font-size: 18px;}
+}
+#form{
+display: flex;
+text-align: center;
+}
+.yow{
+justify-content: center;
+}
+footer {
+  background:#1f2937;
+  color:#d1d5db;
+  padding:30px;
+  text-align:center;
+  margin-top: 100%;
+  border-top: 5px solid #5f0077;
+  height:10px;
+}
+
+
+
+
+     </style>
+    <body>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo"><img  id="header-img" src="https://cdn-icons-png.freepik.com/256/11495/11495819.png?semt=ais_hybrid" alt="Smart logo" >HOME PRODUCT</div>
+            <nav id="nav-bar">
+                <a class="nav-link" href="#Feature">Feature</a>
+                <a class="nav-link" href="#How_it_works">Adv</a>
+                <a class="nav-link" href="#Pricing">Pricing</a>
+           </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>    
+    <form id="form" action="https://www.freecodecamp.com/email-submit" class="yow">
+        <label="foremail">
+          <input type="email" id="email" name="email" placeholder="Enter your email address"></input>
+          <input type="submit" id="submit">
+          </input>
+          </form>
+    <div class="maincontainer" id="Feature">
+       
+        
+        <div class="Featurebox">
+            <h2>High Quality Materials</h2>
+            <p>Our Smart Products use the high quality materials which is sourced locally and mainly procured from SALO ind.</p>
+        </div>
+        <div class="Featurebox">
+            <h2 >Fast Shipping</h2>
+            <p>We make sure you recieve your smart product as soon as we have finished making it. We also provide free returns if you are not satisfied. managed by estiller inc.</p>
+        </div>
+
+        <div class="Featurebox">
+            <h2>Quality Aussurance</h2>
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your smart products. handled by lopez inc.</p>
+        </div>
+
+    </div>
+    <br>
+    <div class="secondcontainer" id="How_it_works">
+        <iframe height="240" id="video" src="https://www.youtube-nocookie.com/embed/1fbJRrHL1i0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen type="video/mp4"></iframe>
+
+    </div>
+    <br>
+
+    <div class="lastcontainer" id="Pricing">
+        <div class="pricebox">
+            <div class="header2">Google Nest Learning Thermostat</div>
+            <p class="ph">$256</p>
+            <ul>
+                <li> Smart Energy Management</li>
+                <li> Enhanced Display and User Interface</li>
+                <li> Compatibility and Installation Ease</li>
+                <input type="submit" id ="submit" value="SELECT" class="button">
+            </ul>
+         
+
+        </div>
+        <div  class="pricebox">
+            <div class="header2">Hunter Douglass Blinds</div>
+            <p class="ph">$1200</p>
+            <ul>
+                <li> Superior Quality and Craftsmanship</li>
+                <li> Innovative Features</li>
+                <li> Extensive Customization Options</li>
+                <input type="submit" id="submit" value="SELECT" class="button">
+            </ul>
+           
+        </div>
+        <div  class="pricebox">
+            <div class="header2">Grate 30 Fireplace Grate</div>
+            <p class="ph">$4745</p>
+                <ul>
+                    <li> Durable Construction</li>
+                    <li> Efficient Airflow Design</li>
+                    <li> Log Stability and Safety</li>
+                    <input type="submit" id="submit" value="SELECT" class="button">
+                </ul>
+            
+                
+        </div>
+    </div>
+    <footer id="footer">
+              <p>© 2025 Home Product inc.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="styles.css" rel="stylesheet"> -->
+     <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* :root{
+
+    --HEADER-RED: rgb(153, 0, 255);
+    --FONT-COLOR: whitesmoke;
+    --BODY-GRAY: rgb(70, 70, 71);
+    --HEADER-HOVER-BLUE: rgb(98, 98, 236);
+    --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+    --POPPING-RED: brown;
+
+} */
+/* UTILITY CLASSES */
+.wrap{
+    white-space:wrap;
+}
+
+.inline{
+    display: inline;
+}
+
+/* || NAVIGATION BAR */
+.nav__bar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background:linear-gradient(90deg, rgb(170, 0, 255), rgb(255, 89, 0));
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid black;
+}
+
+.nav__bar ul{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav__bar li{
+    display: inline;
+    padding: 1em 1em;
+    height: 80px;
+}
+
+.nav__links{
+    text-decoration: none;
+    color: white;
+}
+
+.nav__bar li:hover, .nav__bar li:focus{
+    background:linear-gradient(rgb(255, 89, 0),rgb(170, 0, 255));
+}
+
+/* WELCOME SECTION */
+
+.section__first{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 30, 119);
+}
+
+.section__h1{
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.756);
+}
+
+.section__p{
+    font-style: italic;
+    font-size: 1.7em;
+    color: var(--HEADER-RED);
+}
+
+/* || PROJECTS SECTION */
+
+.section__projects{
+    height: 130vh;
+    background-color: var(--HEADER-HOVER-BLUE);
+}
+
+.section__projects h2{
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    padding-top: 3rem;
+}
+
+.projects__div{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-tile{
+    width: 30%;
+    min-width: 300px;
+    text-decoration: none;
+}
+
+.projects__images{
+    width: 100%;
+    height: 400px;
+    display: block;
+
+}
+
+.projects__p{
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: var(--FONT-COLOR);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.projects__p:hover::after{
+    content: '!';
+    color: orange;
+    position: absolute;
+    right: 20px;
+}
+
+.projects__p:hover::before{
+    content: '!';
+    color: orange;
+    position: absolute;
+    left: 20px;
+
+}
+
+
+.div__button{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects__button{
+    padding: 1rem 1.5rem;
+    background-color: var(--PROJECT-PBGCOLOR);
+    color: var(--FONT-COLOR);
+    font: inherit;
+    cursor: pointer;
+}
+
+.projects__button:hover{
+    background: var(--POPPING-RED);
+    transition: background 0.5s ease;
+}
+
+/* CONTACT SECTION */
+
+.section__contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PROJECT-PBGCOLOR);
+    gap: 2rem;
+}
+.contact__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--FONT-COLOR);
+}
+.contact__h2{
+    font-size: 3.5rem;
+}
+.contact__p{
+    font-style: italic;
+    font-weight: 100;
+}
+.contact__links a{
+    color: var(--FONT-COLOR);
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.contact__links a:hover{
+    transform: translateY(-2rem);
+    transition: all 0.5s ease;
+}
+
+/* || FOOTER */
+.footer{
+    height: 120px;
+    background-color: rgb(52, 53, 58);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 4px solid var(--POPPING-RED);
+}
+
+.footer p{
+    color: var(--FONT-COLOR);
+    padding: 1rem;
+}
+
+.footer__link{
+    color: var(--FONT-COLOR);
+    text-decoration: none;
+}
+
+/* DARK MODE */
+@media(prefers-color-scheme: dark){
+    :root{
+        --HEADER-RED: rgb(194, 0, 215);
+        --FONT-COLOR: whitesmoke;
+        --BODY-GRAY: rgb(70, 70, 71);
+        --HEADER-HOVER-BLUE: rgb(30, 30, 44);
+        --PROJECT-PBGCOLOR: rgb(52, 53, 58);
+        --POPPING-RED: rgb(137, 59, 255);
+    }
+}
+     </style>
+    <title>Final Project</title>
+</head>
+<body>
+
+    <header>
+        <nav class="nav__bar" id="navbar">
+            <ul>
+                <li><a class="nav__links" href="#welcome-section">About</a></li>
+                <li><a class="nav__links" href="#projects">Work</a></li>
+                <li><a class="nav__links" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="section__first" id="welcome-section">
+
+            <h1 class="section__h1">John Leo L. Lopez</h1>
+            <p class="section__p">I.T Student</p>
+
+        </section>
+    </header>
+
+    <main>
+        <section class="section__projects" id="projects">
+            <h2>List of Projects</h2>
+            <div class="projects__div">
+                <!-- <a href="1magazine.html" target="_blank" class="project-tile">
+                    <img class="projects__images" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+                    <p class="projects__p">Tribute Page</p>
+                </a>
+                <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank" class="project-tile">
+                    <img class="projects__images" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png">
+                    <p class="projects__p">Random Quote Machine</p>
+                </a> -->
+                <a href="1catphotoapplpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Cat Photo App</p>
+                </a>
+                <a href="1campercafelpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Camper Cafe</p>
+                </a>
+                <a href="1coloredmarkerslpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Colored Marker</p>
+                </a>
+                <a href="1registrationformlpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Registration Form</p>
+                </a>
+                <a href="1surveylpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Survey</p>
+                </a>
+                <a href="1rothkopaintlpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Rothko Painting</p>
+                </a>
+                <a href="1photogallerylpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Photo Gallery</p>
+                </a>
+                <a href="1nutrionallabllpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Nutrition Label</p>
+                </a>
+                <a href="1accessbilityquizlpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Accessibility Quiz</p>
+                </a>
+                <a href="1tributepage.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Tribute</p>
+                </a>
+                <a href="1balncsheetlpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Balance Sheet</p>
+                </a>
+                <a href="1catpaintinglpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Cat Painting</p>
+                </a>
+                <a href="1pianolpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Piano</p>
+                </a>
+                <a href="1techdolpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Technical Documentation</p>
+                </a>
+                <a href="1cityskylinelpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">City Skyline</p>
+                </a>  
+                <a href="1magazine.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Magazine</p>
+                </a> 
+                <a href="1Productlanding_3rdyr.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Product Landing Page</p>
+                </a>  
+                <a href="1ferriswheellpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Ferris Wheel</p>
+                </a>
+                <a href="1pengulpz.html" target="_blank" class="project-tile">
+                    <p class="projects__p">Penguin</p>
+                </a>
+            </div>
+            <!-- <div class="div__button">
+                <button class="projects__button">Show all &nbsp;&nbsp;></button>
+            </div> -->
+            <!-- <a href="1surveylpz.html" target="_blank" class="project-tile">
+                <p class="projects__p">none</p>
+            </a> -->
+        </section>
+    </main>
+
+    <section class="section__contact" id="contact">
+        <div class="contact__header">
+            <h2 class="contact__h2">I.T huh</h2>
+            <p class="contact__p">Coffee?</p>
+        </div>
+        <div class="contact__links">
+            <a href="https://www.facebook.com/AspectOfTargon" id="profile-link" target="_blank">Facebook</a>
+            <a href="https://github.com/freecodecamp" id="profile-link" target="_blank">Github</a>
+            <a href="https://twitter.com/freecodecamp" id="profile-link" target="_blank">Twitter</a>
+            <a href="mailto:example@example.com" id="profile-link" target="_blank">Send an Email</a>
+            <a href="tel: 555-555-5555 id="profile-link" target="_blank"">Call me</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="wrap inline">**This a portfolio.</p>
+        <p class="wrap inline">&copy; Created for <a class="footer__link" href="https://github.com/">RESUME</a></p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,222 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Documentation</title>
+   <style>@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    line-height: 1.3rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .navbar-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 10px 0 10px 10px ;
+  }
+  
+  .nav-link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase ;
+    letter-spacing: 0.1rem;
+    color: white;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  a {
+    border-top: 1px solid white;
+    padding: 10px
+  }
+  
+  a:last-child {
+    border-bottom: 1px solid white;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
+  main {
+    margin-left: 250px; 
+    padding: 20px 40px 0px 20px;
+    
+  }
+  
+  .main-section {
+    margin-bottom: 40px;
+    
+  }
+  
+  header {
+    font-size: 2em;
+    margin-bottom: 20px;
+    ;
+  }
+  
+  p {
+    line-height: 1.8rem;
+    margin-bottom: 20px;
+    background-color: rgb(211, 211, 211);
+    
+  }
+  
+  span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
+  
+  .code-caveat {
+    font-weight: normal;
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-style: italic;
+  }
+  
+  code {
+    display: block;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  li {
+    margin: 10px 0 5px 20px;
+    list-style:circle;
+    background-color: rgb(211, 211, 211);
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+    <header class="navbar-header">C++ Pointers</header>
+    <a class="nav-link" href="#c++_starting">c++ starting</a>
+    <a class="nav-link" href="#c++_functions">c++ functions</a>
+    <a class="nav-link" href="#c++_classes_objects">c++ classes objects</a>
+    <a class="nav-link" href="#c++_data_structures_stl">c++ data structures stl</a>
+    <a class="nav-link" href="#c++_how_to">c++ how to</a>
+</nav>
+
+<main id="main-doc">
+
+    <section id="c++_starting" class="main-section">
+        <header>c++ starting</header>
+         <p><span>C++</span> a general-purpose, object-oriented programming language, created as 
+            an extension of the C language, known for its speed and control over system resources, 
+            making it suitable for developing high-performance applications and systems software. </p>
+         <p>C++ code example: *</p>
+           <code> <p > #include <iostream>
+
+            int main() {
+                std::cout << "Hello World!";
+                return 0;
+            } </p > </p></code>
+         <p><span>Python</span> is a versatile, high-level, general-purpose programming language known
+             for its readability and ease of use, making it a popular choice for various applications,
+             including web development, data analysis, and machine learning. </p>
+         <p>Python code example: *</p>
+            <code> def main():
+                print("Hello World!")
+            main()</code>
+
+    </section> 
+
+    <section id="c++_functions" class="main-section">
+        <header>c++ functions</header>
+         <p><span>Functions</span> A function is a block of code which only runs when it is called.<br>
+            You can pass data, known as parameters, into a function.<br>
+            Functions are used to perform certain actions, and they are important for reusing code: 
+            Define the code once, and use it many times.</p>
+         <p>Function code example: *</p>
+           <code> //The syntax to declare a function is:<br>
+            returnType functionName (parameter1, parameter2,...) {
+                // function body   
+            }<br>
+        //Here's an example of a function declaration.<br>
+        // function declaration
+        void greet() {
+            cout << "Hello World";
+        }</code>
+    </section>
+
+    <section id="c++_classes_objects" class="main-section">
+        <header>c++ classes objects</header>
+         <p><span>Classes & Objects</span> Classes and objects are the two main aspects of object-oriented programming.</p>
+         <p>Classes and Objects example: *</p>
+           <code> Class = Fruit while Objects = Apple, Banana, Mango</code>
+    </section>
+
+    <section id="c++_data_structures_stl" class="main-section">
+        <header>c++ data structures stl</header>
+         <p><span>Data Structures & STL</span> Data structures are used to store and organize data. An array is an example of a data structure, which allows multiple elements to be stored in a single variable.<br>
+            STL, which stands for The Standard Template Library.<br>
+            STL is a library that consist of different data structures and algorithms to effectively store and manipulate data.
+
+            If we say that data structures store data, we can say that algorithms are used to solve different problems, often by searching through and manipulating those data structures.</p>
+         <p>Data Structures and STL code example: *</p>
+           <code> 
+            <ul>
+            <li>Vector - Stores elements like an array but can dynamically change in size. Adding and removing of elements are usually done at the end. Elements can be accessed by index.<br><br></li>
+            <li>List - Stores elements sequentially, where each element is connected to the next. Adding and removing of elements can be done at both ends. Not accessible by index.<br><br></li>
+            <li>Stack - Stores elements in a specific order, called LIFO (Last In, First Out), where elements can only be added and removed from the top. Not accessible by index.<br><br></li>
+            <li>Queue - Stores elements in a specific order, called FIFO (First In, First Out), where elements are added at the end and removed from the front. Not accessible by index.<br><br></li>
+            <li>Deque - Stores elements in a double-ended queue, where elements can be added and removed from both ends. Elements can be accessed by index.<br><br></li>
+            <li>Set - Stores unique elements. Not accessible by index.<br><br></li>
+            <li>Map - Stores elements in "key/value" pairs. Accessible by keys (not by index).<br><br></li>
+            </ul>
+            //Here is an example of using vectors, after we have included the <vector> library:<br>
+        // Create a vector called cars that will store strings
+        vector<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        
+        // Print vector elements
+        for (string car : cars) {
+          cout << car << "\n";
+        }</code>
+    </section>
+
+    <section id="c++_how_to" class="main-section">
+        <header>c++ how to</header>
+         <p>C++ How To <span>Add Two Numbers</span> In this example, the user must input two numbers. Then we print the sum by calculating (adding) the two numbers:</p>
+         <p>How To Add Two Number's examples:</p>
+              <code> #include <iostream><br>
+                using namespace std;<br>
+                
+                int main() {<br>
+                  int x, y;<br>
+                  cout << "Type a number: ";<br>
+                  cin >> x;<br>
+                  cout << "Type another number: ";<br>
+                  cin >> y;<br>
+                  int sum = x + y;<br>
+                  cout << "Sum is: " << sum;<br>
+                  return 0;
+                }</code>
+    </section>
+
+    
+</main>
+
+</body>
+</html> 
